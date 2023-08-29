@@ -12,7 +12,7 @@ dotenv.config();
 
 connectDB();
 
-const whiteList = [process.env.FRONTEND_URL];
+const whiteList = process.env.FRONTEND_URL;
 app.use(
   cors({
     origin: whiteList,
@@ -20,6 +20,6 @@ app.use(
 );
 app.use("/api", contactRoutes);
 
-const server = app.listen(PORT, () =>
+  app.listen(PORT, () =>
   console.log(`server running on ${PORT} port`)
 );
