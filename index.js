@@ -12,7 +12,7 @@ dotenv.config();
 
 connectDB();
 
-const whiteList = process.env.FRONTEND_URL;
+const whiteList = "https://portfolio-af-marco.netlify.app";
 app.use(
   cors({
     origin: whiteList,
